@@ -8,7 +8,7 @@
     <ul>
         <?php
         // Kết nối đến cơ sở dữ liệu
-        $conn = new mysqli("localhost", "id19768936_lib", "Lib12345@", "id19768936_library");
+        $conn = new mysqli("localhost", "username", "password", "database_name");
         if ($conn->connect_error) {
             die("Kết nối thất bại: " . $conn->connect_error);
         }
