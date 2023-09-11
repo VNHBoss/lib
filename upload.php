@@ -14,7 +14,7 @@ ini_set('display_errors', 1);
         $password = $_POST["password"];
 
         // Kiểm tra mật mã
-        if($password === "Nthh8124") { // Thay "your_secret_password" bằng mật mã thực tế
+        if($password === "abcxyz") { // Thay "abcxyz" bằng mật mã thực tế
             if(isset($_FILES["file"]) && $_FILES["file"]["error"] == 0) {
                 // Xử lý việc upload sách
                 $file_name = $_FILES["file"]["name"];
@@ -28,7 +28,7 @@ ini_set('display_errors', 1);
                     $description = $_POST["description"];
 
                     // Kết nối đến cơ sở dữ liệu và thêm thông tin sách
-                    $conn = new mysqli("localhost", "id19768936_lib", "Lib12345@", "id19768936_library");
+                    $conn = new mysqli("localhost", "username", "password", "database_name");
                     if ($conn->connect_error) {
                         die("Kết nối thất bại: " . $conn->connect_error);
                     }
